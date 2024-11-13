@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.video-background {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main {
+    height: 100vh;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+.navbar-alt {
+    display: flex;
+    gap: 10px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 14px 18px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: rgb(110, 110, 110);
+}
+
+#sign-up {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: #353535;
+}
+
+#sign-up:hover {
+    background-color: #555;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.arrow {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 10;
+    width: max-content;
+}
+
+#wetransfer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 2.2rem;
+    color: white;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: black;
+    padding: 8px 20px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.dropdown-menu a:hover {
+    color: #555;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.open-icon {
+    display: inline;
+}
+
+.close-icon {
+    display: none !important;
+}
+
+#sign-up-mobile {
+    display: none;
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 20%;
+    height: fit-content;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-bottom: 20px;
+    padding-inline: 20px;
+    text-align: center;
+    gap: 30px;
+}
+
+.video-card video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.send-button{
+    background-color: rgb(68, 105, 239);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    width: 80%;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: rgb(80, 115, 239);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 10px;
+}
+
+#video-text {
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#see-more-button {
+    width: 30%;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+    .video-card {
+        width: 80%;
+    }
+    #wetransfer {
+        bottom: -50px;
+    }
+    #video-text {
+        color: white;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    #see-more-button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .video-card {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1400px) {
+    .video-card {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        position: relative;
+        left: 50%;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .navbar-alt {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar-alt.active {
+        display: flex;
+        width: 100%;
+    }
+
+    .open-icon {
+        position: relative;
+        bottom: 25px;
+    }
+
+    .close-icon {
+        position: relative;
+        bottom: 25px;
+    }
+
+    .hamburger.active .open-icon {
+        display: none;
+    }
+
+    .hamburger.active .close-icon {
+        display: inline !important;
+    }
+    
+    #sign-up-mobile {
+        display: inline;
+        padding: 5px 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    #sign-up-mobile:hover {
+        background-color: #555;
+    }
+
+    #sign-up {
+        display: none;
+    }
+
+    #login {
+        display: none;
+    }
+
+    .logo-signup {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        margin-top: 100px;
+        align-items: center;
+    }
+}
